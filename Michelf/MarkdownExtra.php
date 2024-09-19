@@ -224,7 +224,7 @@ class MarkdownExtra extends \Michelf\Markdown {
 	 * @return string
 	 */
 	protected function doExtraAttributes($tag_name, $attr, $defaultIdValue = null, $classes = array()) {
-		if (empty($attr) && !$defaultIdValue && empty($classes)) {
+		if (is_null($attr) || (empty($attr) && !$defaultIdValue && empty($classes))) {
 			return "";
 		}
 
