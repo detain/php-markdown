@@ -229,7 +229,7 @@ class MarkdownExtra extends \Michelf\Markdown {
 		}
 
 		// Split on components
-		preg_match_all('/[#.a-z][-_:a-zA-Z0-9=]+/', $attr, $matches);
+		preg_match_all('/[#.a-z][-_:a-zA-Z0-9=]+/', $attr ?? '', $matches);
 		$elements = $matches[0];
 
 		// Handle classes and IDs (only first ID taken into account)
@@ -499,7 +499,7 @@ class MarkdownExtra extends \Michelf\Markdown {
 			$parsed .= $parts[0]; // Text before current tag.
 
 			// If end of $text has been reached. Stop loop.
-			if (count($parts) < 3) {
+			if ($parts === false || count($parts) < 3) {
 				$text = "";
 				break;
 			}
