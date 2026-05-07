@@ -3,7 +3,18 @@
 	"type": "library",
 	"description": "PHP Markdown",
 	"homepage": "https://michelf.ca/projects/php-markdown/",
-	"keywords": ["markdown"],
+	"keywords": [
+		"markdown",
+		"php-markdown",
+		"markdown-parser",
+		"commonmark",
+		"parsedown",
+		"md",
+		"html",
+		"text-processing",
+		"readme",
+		"static-site-generator"
+	],
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
